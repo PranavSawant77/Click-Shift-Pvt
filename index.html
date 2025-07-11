@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Shift Pvt</title>
+        <!-- favicon -->
+    <link rel="shortcut icon" href="./img/click_shift_logo-removebg-preview.png" type="image/x-icon">
+
+    <!-- Style Links -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 overflow-x-hidden">
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <!-- <span class="text-2xl font-bold gradient-text">Nexus</span> -->
+                         <div class="logo-img">
+                            <img class="logo"  src="./img/click_shift_logo-removebg-preview.png" alt="click_shift_logo">
+                         </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors">Home</a>
+                            <a href="#services" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors">Services</a>
+                            <a href="#work" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors">Our Work</a>
+                            <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors">About</a>
+                            <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:text-blue-600 transition-colors">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <button class="gradient-border px-6 py-2 rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                        Get Started
+                    </button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Services</a>
+                <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Our Work</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">About</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100">Contact</a>
+                <button class="w-full mt-2 px-6 py-2 rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-purple-50/50 to-pink-50/50"></div>
+        </div>
+        
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    <span class="gradient-text">Transform</span> Your Digital Presence
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">
+                    We craft data-driven digital marketing strategies that deliver real results. 
+                    Let's grow your business together.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="gradient-border px-8 py-3 rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-medium">
+                        Explore Services
+                    </button>
+                    <button class="px-8 py-3 rounded-md border-2 border-blue-500 text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium">
+                        Watch Demo <i class="fas fa-play-circle ml-2"></i>
+                    </button>
+                </div>
+                <div class="mt-8 flex items-center space-x-4">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/12.jpg" alt="">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/32.jpg" alt="">
+                        <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/44.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium">Trusted by 500+ businesses</p>
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <span class="ml-2 text-sm">4.9/5 (1200+ reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="floating">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Digital marketing team" 
+                         class="rounded-2xl shadow-xl w-full h-auto">
+                </div>
+                
+                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg w-40">
+                    <div class="flex items-center">
+                        <div class="p-2 bg-blue-100 rounded-lg mr-3">
+                            <i class="fas fa-chart-line text-blue-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Average growth</p>
+                            <p class="font-bold text-blue-600">+237%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg w-40">
+                    <div class="flex items-center">
+                        <div class="p-2 bg-purple-100 rounded-lg mr-3">
+                            <i class="fas fa-users text-purple-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500">Happy clients</p>
+                            <p class="font-bold text-purple-600">500+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Clients Section -->
+    <!-- Infinity Horizontal Scrolling Hospital Names -->
+<div class="w-full bg-white py-4 overflow-hidden">
+  <div class="relative">
+    <div class="hospital-marquee flex whitespace-nowrap">
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-blue-700">Holi spirit hospital |</span>
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-purple-700">Swastik hospital |</span>
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-pink-700">Sanjivani hospitals |</span>
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-green-700">Nirali hospital |</span>
+      <!-- Repeat for seamless loop -->
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-blue-700">Holi spirit hospital |</span>
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-purple-700">Swastik hospital |</span>
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-pink-700">Sanjivani hospitals |</span>
+      <span class="mx-8 text-lg md:text-2xl font-semibold text-green-700">Nirali hospital |</span>
+    </div>
+  </div>
+</div>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold">OUR SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Comprehensive Digital Solutions</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    We offer a full spectrum of digital marketing services tailored to your business needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SEO Optimization</h3>
+                    <p class="text-gray-600 mb-4">
+                        Boost your search rankings with our comprehensive SEO strategies that drive organic traffic.
+                    </p>
+                    <div class="flex items-center text-blue-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">Success Rate</span>
+                            <span class="text-sm font-bold">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-blue-600 h-1.5 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-ad text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">PPC Advertising</h3>
+                    <p class="text-gray-600 mb-4">
+                        Maximize ROI with targeted pay-per-click campaigns across Google, Facebook, and more.
+                    </p>
+                    <div class="flex items-center text-purple-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">ROI Increase</span>
+                            <span class="text-sm font-bold">3.5x</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-purple-600 h-1.5 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-hashtag text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Social Media Marketing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Build brand awareness and engagement through strategic social media campaigns.
+                    </p>
+                    <div class="flex items-center text-pink-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">Engagement Rate</span>
+                            <span class="text-sm font-bold">4.2x</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-pink-600 h-1.5 rounded-full" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-envelope text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Email Marketing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Nurture leads and retain customers with personalized email campaigns that convert.
+                    </p>
+                    <div class="flex items-center text-green-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">Open Rate</span>
+                            <span class="text-sm font-bold">42%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-green-600 h-1.5 rounded-full" style="width: 42%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Content Creation</h3>
+                    <p class="text-gray-600 mb-4">
+                        Captivate your audience with high-quality, SEO-optimized content that tells your story.
+                    </p>
+                    <div class="flex items-center text-yellow-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">Traffic Increase</span>
+                            <span class="text-sm font-bold">3.8x</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-yellow-500 h-1.5 rounded-full" style="width: 78%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Analytics & Reporting</h3>
+                    <p class="text-gray-600 mb-4">
+                        Data-driven insights to measure performance and optimize your marketing strategy.
+                    </p>
+                    <div class="flex items-center text-indigo-600 font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-500">Data Accuracy</span>
+                            <span class="text-sm font-bold">99.9%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
+                            <div class="bg-indigo-600 h-1.5 rounded-full" style="width: 99%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2" id="stat1">0</div>
+                    <p class="text-blue-100">Projects Completed</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2" id="stat2">0</div>
+                    <p class="text-blue-100">Happy Clients</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2" id="stat3">0</div>
+                    <p class="text-blue-100">Marketing Experts</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold mb-2" id="stat4">0</div>
+                    <p class="text-blue-100">Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Work Section -->
+    <section id="work" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold">OUR WORK</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Success Stories</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    See how we've helped businesses achieve remarkable growth through digital marketing.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="E-commerce project" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">E-commerce Brand</h3>
+                            <p class="text-blue-200 mb-3">Increased revenue by 320% in 6 months</p>
+                            <button class="px-4 py-2 bg-white text-blue-600 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="SaaS project" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">SaaS Platform</h3>
+                            <p class="text-blue-200 mb-3">Grew user base by 500% in 1 year</p>
+                            <button class="px-4 py-2 bg-white text-blue-600 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Startup project" 
+                         class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <h3 class="text-white text-xl font-bold mb-1">Tech Startup</h3>
+                            <p class="text-blue-200 mb-3">Achieved 10,000 signups in first month</p>
+                            <button class="px-4 py-2 bg-white text-blue-600 rounded-md text-sm font-medium hover:bg-blue-50 transition-colors">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 rounded-md border-2 border-blue-500 text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium">
+                    View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- video Section -->
+    
+    <div class="bg-white min-h-screen flex flex-col items-center py-12">
+  <h1 class="text-3xl font-bold mb-8 text-center mt-12 text-gray-800">Telling stories which people love</h1>
+  <h2 class="text-lg font-midium mb-8 text-center mt-0text-gray-800">We craft compelling stories that captivate hearts, spark emotions, and keep your audience coming back for more.</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl px-4">
+    <!-- Video 1 -->
+    <a href="https://youtube.com/shorts/1G4isv_Fylg" target="_blank" class="video-card shadow-lg hover:shadow-xl transition rounded-xl bg-gray-50">
+      <div class="video-thumbnail">
+        <img src="https://i.ytimg.com/vi/1G4isv_Fylg/hqdefault.jpg" alt="Short 1">
+        <span class="play-icon"><i class="fa fa-play"></i></span>
+      </div>
+      <div class="p-4">
+        <h2 class="font-semibold text-lg text-gray-700">Amazing Short #1</h2>
+        <p class="text-gray-500 text-sm mt-1">Click to watch on YouTube</p>
+      </div>
+    </a>
+    <!-- Video 2 -->
+    <a href="https://youtube.com/shorts/2Vv-BfVoq4g" target="_blank" class="video-card shadow-lg hover:shadow-xl transition rounded-xl bg-gray-50">
+      <div class="video-thumbnail">
+        <img src="https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg" alt="Short 2">
+        <span class="play-icon"><i class="fa fa-play"></i></span>
+      </div>
+      <div class="p-4">
+        <h2 class="font-semibold text-lg text-gray-700">Amazing Short #2</h2>
+        <p class="text-gray-500 text-sm mt-1">Click to watch on YouTube</p>
+      </div>
+    </a>
+    <!-- Video 3 -->
+    <a href="https://youtube.com/shorts/3JZ_D3ELwOQ" target="_blank" class="video-card shadow-lg hover:shadow-xl transition rounded-xl bg-gray-50">
+      <div class="video-thumbnail">
+        <img src="https://i.ytimg.com/vi/3JZ_D3ELwOQ/hqdefault.jpg" alt="Short 3">
+        <span class="play-icon"><i class="fa fa-play"></i></span>
+      </div>
+      <div class="p-4">
+        <h2 class="font-semibold text-lg text-gray-700">Amazing Short #3</h2>
+        <p class="text-gray-500 text-sm mt-1">Click to watch on YouTube</p>
+      </div>
+    </a>
+  </div>
+ </div>
+   
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="floating">
+                        <img src="./img/click-shift.jpg" 
+                             alt="Our team" 
+                             class="rounded-2xl shadow-xl w-full h-auto">
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg w-48">
+                        <div class="flex items-center">
+                            <div class="p-2 bg-blue-100 rounded-lg mr-3">
+                                <i class="fas fa-trophy text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500">Awards won</p>
+                                <p class="font-bold text-blue-600">25+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <span class="text-blue-600 font-semibold">ABOUT US</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">We're More Than Just Marketers</h2>
+                    <p class="text-gray-600 mb-6">
+                       Clickshift advertising Pvt Ltd Founded in 2024, Clickshift advertising Pvt Ltd has grown from a small team of passionate marketers to a full-service digital agency with clients across the globe. We believe in creating meaningful connections between brands and their audiences.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="p-2 bg-blue-100 rounded-lg mr-4">
+                                <i class="fas fa-lightbulb text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Innovative Approach</h4>
+                                <p class="text-sm text-gray-600">We stay ahead of digital trends to keep your brand relevant.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-2 bg-purple-100 rounded-lg mr-4">
+                                <i class="fas fa-chart-line text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Data-Driven</h4>
+                                <p class="text-sm text-gray-600">Every decision is backed by analytics and performance data.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-2 bg-pink-100 rounded-lg mr-4">
+                                <i class="fas fa-heart text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Passionate Team</h4>
+                                <p class="text-sm text-gray-600">We love what we do and it shows in our work.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-2 bg-green-100 rounded-lg mr-4">
+                                <i class="fas fa-handshake text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Client-Centric</h4>
+                                <p class="text-sm text-gray-600">Your success is our top priority.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="gradient-border px-8 py-3 rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-medium">
+                        Meet Our Team
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Digital Presence?</h2>
+                <p class="max-w-2xl mx-auto text-blue-100 mb-8">
+                    Schedule a free consultation with our experts to discuss how we can help grow your business.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="px-8 py-3 rounded-md bg-white text-blue-600 hover:bg-blue-50 transition-all duration-300 font-medium">
+                        Get Free Audit
+                    </button>
+                    <button class="px-8 py-3 rounded-md border-2 border-white text-white hover:bg-white/10 transition-all duration-300 font-medium">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-blue-600 font-semibold">CONTACT US</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Let's Start Your Project</h2>
+                    <p class="text-gray-600 mb-8">
+                        Have questions or ready to get started? Fill out the form and our team will get back to you within 24 hours.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-100 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Our Office</h4>
+                                <p class="text-gray-600">A 4 navkuber,navghar road ,bhayender east ,<br>Thane 201105</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 bg-purple-100 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email Us</h4>
+                                <p class="text-gray-600">admin@clickshift.org<br></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="p-3 bg-pink-100 rounded-lg mr-4">
+                                <i class="fas fa-phone-alt text-pink-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Call Us</h4>
+                                <p class="text-gray-600">+91 9136955933<br>Mon-Fri, 9am-5pm </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-200 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-pink-600 hover:bg-pink-200 transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
+                            <select id="service" name="service" 
+                                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all">
+                                <option value="">Select a service</option>
+                                <option value="seo">SEO Optimization</option>
+                                <option value="ppc">PPC Advertising</option>
+                                <option value="social">Social Media Marketing</option>
+                                <option value="content">Content Creation</option>
+                                <option value="email">Email Marketing</option>
+                                <option value="analytics">Analytics & Reporting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                      class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full gradient-border px-6 py-3 rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-medium">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Nexus</h3>
+                    <p class="text-gray-400 mb-4">
+                        Transforming businesses through innovative digital marketing solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">SEO Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">PPC Advertising</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Social Media Marketing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Content Creation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Email Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter for the latest digital marketing tips and trends.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" 
+                               class="px-4 py-2 rounded-l-md text-gray-900 focus:outline-none w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md transition-colors">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2024 Clickshift advertising Pvt Ltd. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="main.js"></script>
+</div>
+</html>

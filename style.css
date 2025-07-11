@@ -1,0 +1,178 @@
+  /* Custom animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* .logo-img{
+            background-color: #ec489a00;
+            height: 15vh;
+            width: 10vw;
+            margin-left:-9vw;
+            padding-left: -8vw;
+            position:fixed;
+            background-image: url(./img/click_shift_logo-removebg-preview.png);
+            background-size:contain;
+            background-position-y:-9vw;
+        } */
+
+        /* ...existing code... */
+.logo-img .logo {
+    width: 40vw;
+    max-width: 220px;
+    height: auto;
+    margin-left: -13vw;
+    padding-left: 0;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-img .logo {
+        width: 60vw;
+        max-width: 160px;
+         margin-left: -9vw;
+    }
+}
+@media (max-width: 480px) {
+    .logo-img .logo {
+        width: 80vw;
+        max-width: 120px;
+         margin-left: -10vw;
+    }
+}
+
+
+
+        @keyframes hospital-scroll {
+         0% { transform: translateX(0); }
+         100% { transform: translateX(-50%); }
+        }
+        
+        .hospital-marquee {
+         min-width: 200%;
+         animation: hospital-scroll 20s linear infinite;
+         }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(#3b82f6, #8b5cf6);
+            border-radius: 10px;
+        }
+        
+        /* Interactive card */
+        .service-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) rotateX(10deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Particle background */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        /* Glow effect */
+        .glow {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        
+        .glow:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
+        }
+        
+        /* Animated gradient border */
+        .gradient-border {
+            position: relative;
+            border-radius: 0.5rem;
+        }
+        
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            border-radius: 0.6rem;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #f97316);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+   .video-thumbnail {
+      position: relative;
+      height: 430px;
+      overflow: hidden;
+      border-radius: 0.75rem;
+    }
+    .video-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #ef4444;
+      opacity: 0.9;
+    }
+    .video-card:hover .play-icon {
+      opacity: 1;
+    }
