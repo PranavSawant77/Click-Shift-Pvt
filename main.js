@@ -1,3 +1,18 @@
+
+function sendMail(){
+    let parms = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        phone :document.getElementById("phone").value,
+        service :document.getElementById("service").value,
+        message :document.getElementById("message").value,
+    }
+
+    emailjs.send("service_zm3nube","template_abehi2k",parms).then(alert("Email Sent!!"))
+}
+
+
+
 // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const menu = document.getElementById('mobile-menu');
