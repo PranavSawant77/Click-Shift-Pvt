@@ -8,7 +8,7 @@ function sendMail(){
         message :document.getElementById("message").value,
     }
 
-    emailjs.send("service_zm3nube","template_abehi2k",parms).then(alert("Email Sent!!"))
+    emailjs.send("service_zm3nube","template_abehi2k","template_mkauq4b",parms).then(alert("Email Sent!!"))
 }
 
 
