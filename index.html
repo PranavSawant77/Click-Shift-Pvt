@@ -11,6 +11,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+   <script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "h-qexhrpQRXMqHbCj",
+      });
+   })();
+  </script>
    
 </head>
 <body class="font-sans bg-gray-50 text-gray-800 overflow-x-hidden">
@@ -23,7 +34,7 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <!-- <span class="text-2xl font-bold gradient-text">Nexus</span> -->
+                        
                          <div class="logo-img">
                             <img class="logo"  src="./img/click_shift_logo-removebg-preview.png" alt="click_shift_logo">
                          </div>
@@ -662,7 +673,7 @@
                                       class="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full gradient-border px-6 py-3 rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-medium">
+                        <button type="submit" onclick="sendMail()" class="w-full gradient-border px-6 py-3 rounded-md text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-medium">
                             Send Message
                         </button>
                     </form>
@@ -676,7 +687,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold gradient-text mb-4">Nexus</h3>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Click Shift</h3>
                     <p class="text-gray-400 mb-4">
                         Transforming businesses through innovative digital marketing solutions.
                     </p>
